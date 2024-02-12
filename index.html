@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Notes〡Home</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" href="co.png">
+</head>
+<body>          
+    
+    <div class="sidebarbutton">
+        <button id="sidebarbutton">📘</button>
+    </div>
+
+    <div class="sidebar" id="inactive">
+        <button class="subject-selector" id="inactive">Select Subject..</button>
+        <div class="dropdownbuttons">
+            <button id="test">.</button>
+        </div>
+    </div>
+
+    <div class="maincontent">
+        <p>test</p>
+    </div>
+
+
+</body>
+
+
+<script>
+const sidebar = document.querySelector('.sidebar');
+const sidebarButtonOpener = document.getElementById('sidebarbutton')
+sidebarButtonOpener.addEventListener('click', () => {
+    if(sidebar.getAttribute('id') === 'inactive') {
+        sidebar.setAttribute('id', 'active');
+        sidebarButtonOpener.innerHTML = '📖'
+    } else {
+        sidebar.setAttribute('id', 'inactive');
+        sidebarButtonOpener.innerHTML = '📘'
+    }
+});
+
+const subjectSelector = document.querySelector('.subject-selector')
+subjectSelector.addEventListener('click', () => {
+    if(subjectSelector.getAttribute('id') === 'inactive') {
+        subjectSelector.setAttribute('id', 'active')
+    } else {
+        subjectSelector.setAttribute('id', 'inactive')
+    }
+})
+
+</script>
+
+
+</html>
