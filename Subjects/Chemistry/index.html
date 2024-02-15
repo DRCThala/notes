@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Notes〡Chemistry</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" href="../../co.png">
+</head>
+<body>          
+    
+    <div class="sidebarbutton">
+        <button id="sidebarbutton">📘</button>
+    </div>
+
+    <div class="sidebar" id="inactive">
+        <button class="subject-selector" id="inactive">Change Subject</button>
+        <div id="inactive" class="dropdownbuttons">
+            <button onclick="window.location.href='../../index.html'" id="subject">Return Home</button>
+            <button onclick="window.location.href='../../Subjects/Biology/index.html'" id="subject">Biology</button>
+        </div>
+        <p><br><br>Topic Selection<br><br></p>
+        <button class="spec-topic-selector" id="inactive">Specification</button>
+        <button class="pc-topic-selector" id="inactive">Principles of Chemistry</button>
+        <button class="ic-topic-selector" id="inactive">Inorganic Chemistry</button>
+        <button class="pyc-topic-selector" id="inactive">Physical Chemistry</button>
+        <button class="oc-topic-selector" id="inactive">Organic Chemistry</button>
+    </div>
+
+    <div class="maincontent">
+        
+        <div class="welcome-content" id="activecontent">
+            <h1>Chemistry</h1>
+            <p>Click the book icon and choose the topic.</p>
+        </div>
+
+        <div class="specification-content" id="inactivecontent">
+            <p>Unfinished Specification.</p>
+        </div>
+
+        <div class="pc-content" id="inactivecontent">
+            <p>PC Contents</p>
+        </div>
+
+        <div class="ic-content" id="inactivecontent">
+            <p>IC Contents</p>
+        </div>
+
+        <div class="pyc-content" id="inactivecontent">
+            <p>PYC Contents</p>
+        </div>
+
+        <div class="oc-content" id="inactivecontent">
+            <p>4.1-4.6: Introduction</p>
+            <h6><strong>Hydrocarbon: </strong>a hydrocarbon is a compound made from only carbons and hydrogens.</h6>
+            <h6><br><br><br><strong>Representing organic molecules key definitions:</strong><br><strong>Empirical formula: </strong>simplest whole number ratio of each element in a compound.<br><strong>Molecular formula: </strong>actual numbers  of each element in a compound.<br><strong>General formulae: </strong>a formula which, when substituted into, creates a compound where any number is still in the same homologous series.<br><strong>Functional group:</strong> a group of atoms responsible for the chemical reactions of a compound.<br><strong>Homologous series: </strong>a sequence of compounds with similar chemical properties and the same general formula.<br><strong>Isomerism: </strong>compounds with the same molecular formula exist in different forms due to the different arrangements of atoms.<br><strong>Structural Formula: </strong>a formula which shows the arrangement of atoms in the molecule of a compound.<br><strong>Displayed formula: </strong>shows the symbols for each atom in a compound with straight lines representing covalent bonds.</h6>
+            <h6><br><br><br><strong>Naming functional groups:</strong><br><br><strong>Prefixes: </strong>1 carbon: meth-<br>2 carbons: eth-<br>3 carbons: prop-<br>4 carbons: but-<br>5 carbons: pent-<br>6 carbons: hex-<br><br><strong>Suffixes: </strong><br>Alkanes: -ane<br>Alkenes: -ene<br>Alcohols: -ol<br>Carboxylic acids: -anoic acid</h6>
+            <h6><br><br><br><strong>Types of reactions:</strong><br>Addition reaction: 2 reactants → 1 product<br>Substitution reaction: 2 reactants → 2 products<br>Complete combustion reaction: hydrocarbon + oxygen → carbon dioxide + water<br>Incomplete combustion reaction: hydrocarbon + oxygen → carbon/carbon monoxide + water</h6>
+            <br><br><br><br>
+        </div>
+    </div>
+
+
+</body>
+
+
+<script>
+const welcomeContent = document.querySelector('.welcome-content');
+const specificationContent = document.querySelector('.specification-content');
+const pcContent = document.querySelector('.pc-content');
+const icContent = document.querySelector('.ic-content');
+const pycContent = document.querySelector('.pyc-content');
+const ocContent = document.querySelector('.oc-content');
+
+const specTopicSelector = document.querySelector('.spec-topic-selector');
+specTopicSelector.addEventListener('click', () => {
+    welcomeContent.setAttribute('id', 'inactivecontent');
+    pcContent.setAttribute('id', 'inactivecontent');
+    specificationContent.setAttribute('id', 'activecontent');
+    icContent.setAttribute('id', 'inactivecontent');
+    pycContent.setAttribute('id', 'inactivecontent');
+    ocContent.setAttribute('id', 'inactivecontent');
+})
+
+const pcTopicSelector = document.querySelector('.pc-topic-selector');
+pcTopicSelector.addEventListener('click', () => {
+    welcomeContent.setAttribute('id', 'inactivecontent');
+    pcContent.setAttribute('id', 'activecontent');
+    specificationContent.setAttribute('id', 'inactivecontent');
+    icContent.setAttribute('id', 'inactivecontent');
+    pycContent.setAttribute('id', 'inactivecontent');
+    ocContent.setAttribute('id', 'inactivecontent');
+})
+
+const pycTopicSelector = document.querySelector('.pyc-topic-selector');
+pycTopicSelector.addEventListener('click', () => {
+    welcomeContent.setAttribute('id', 'inactivecontent');
+    pcContent.setAttribute('id', 'inactivecontent');
+    specificationContent.setAttribute('id', 'inactivecontent');
+    icContent.setAttribute('id', 'inactivecontent');
+    pycContent.setAttribute('id', 'activecontent');
+    ocContent.setAttribute('id', 'inactivecontent');
+})
+
+const ocTopicSelector = document.querySelector('.oc-topic-selector');
+ocTopicSelector.addEventListener('click', () => {
+    welcomeContent.setAttribute('id', 'inactivecontent');
+    pcContent.setAttribute('id', 'inactivecontent');
+    specificationContent.setAttribute('id', 'inactivecontent');
+    icContent.setAttribute('id', 'inactivecontent');
+    pycContent.setAttribute('id', 'inactivecontent');
+    ocContent.setAttribute('id', 'activecontent');
+})
+
+const icTopicSelector = document.querySelector('.ic-topic-selector');
+icTopicSelector.addEventListener('click', () => {
+    welcomeContent.setAttribute('id', 'inactivecontent');
+    pcContent.setAttribute('id', 'inactivecontent');
+    specificationContent.setAttribute('id', 'inactivecontent');
+    icContent.setAttribute('id', 'activecontent   ');
+    pycContent.setAttribute('id', 'inactivecontent');
+    ocContent.setAttribute('id', 'inactivecontent');
+})
+
+const sidebar = document.querySelector('.sidebar');
+const sidebarButtonOpener = document.getElementById('sidebarbutton')
+sidebarButtonOpener.addEventListener('click', () => {
+    if(sidebar.getAttribute('id') === 'inactive') {
+        sidebar.setAttribute('id', 'active');
+        sidebarButtonOpener.innerHTML = '📖'
+    } else {
+        sidebar.setAttribute('id', 'inactive');
+        sidebarButtonOpener.innerHTML = '📘'
+    }
+});
+
+const subjectSelector = document.querySelector('.subject-selector')
+const dropdowndiv = document.querySelector('.dropdownbuttons')
+subjectSelector.addEventListener('click', () => {
+    if(dropdowndiv.getAttribute('id') === 'inactive') {
+        dropdowndiv.setAttribute('id', 'active')
+    } else {
+        dropdowndiv.setAttribute('id', 'inactive')
+    }
+})
+</script>
+
+
+</html>
