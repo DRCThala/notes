@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+* {
+    font-family: Rubik;
+    padding: 0;
+    margin: 0;
+    text-overflow:ellipsis;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+}
+
+:not(strong) {
+    font-weight: normal;
+}
+strong {
+    font-weight: 400px;
+}
+
+
+.sidebarbutton {
+    width: 4%;
+    height: 100vh;
+    text-align: center;
+    background-color: rgb(241, 241, 239);
+    border-right: 0.25px rgb(168, 164, 164) solid;
+    z-index: 3;
+    position: fixed;
+    opacity: 1;
+    font-size: 100%;  
+}
+
+.sidebarbutton button {
+    width: 100%;
+    height: 7%;
+    border: none;
+    transition: background-color 0.5s ease;
+    border-bottom: 0.5px rgb(204, 201, 201) solid;
+    font-size: 150%;
+    vertical-align: auto;
+    position: relative;
+    z-index: 3;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.sidebarbutton img {
+    width: 50%;
+    height: auto;
+    top: auto;
+    bottom: auto;
+}
+.sidebar#inactive {
+    position: fixed;
+    left: -12.5%;
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.sidebar#active {
+    transition: left 0.5s ease;
+    position: fixed;
+    left: 4%;
+    z-index: 1;
+}
+
+.sidebarbutton button:hover {
+    background-color: lightgrey;
+}
+
+.sidebar {
+    background-color:rgb(250, 250, 250);
+    text-align: center;
+    height: 100%;
+    width: 12.5%;
+    border-right: 0.5px rgb(204, 201, 201) solid;
+    font-size: 200%;
+}
+
+.sidebar button.subject-selector {
+    width: 100%;
+    position: sticky;
+    height: 7%;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.5s ease; 
+    font-size: 50%;
+    margin-bottom: 10%;
+    border-bottom:  0.05px rgb(206, 202, 202) dashed;
+}
+.sidebar .dropdownbuttons #subject {
+    width: 100%;
+    height: 53px;
+    position: sticky;
+    background-color:rgb(250, 250, 250);
+    border: none;
+    border-bottom: 0.05px rgb(206, 202, 202) solid;
+    cursor: pointer;
+}
+
+.sidebar .dropdownbuttons {
+    margin-top: -10%;
+}
+
+.sidebar .dropdownbuttons #subject:hover {
+    background-color: rgb(228, 228, 228);
+}
+.sidebar .dropdownbuttons#inactive {
+    display: none;
+}
+
+.sidebar .dropdownbuttons#active {
+    display:block;
+}
+
+.sidebar .dropdownbuttons {
+    height: 2.5%;
+}
+
+.sidebar button.subject-selector:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.maincontent {
+    flex: 1;
+    text-align: center;
+    margin-left: 4%;
+    font-size: 200%;
+}
+.sidebar p {
+    font-size: 50%;
+    border-bottom: 0.05px rgb(206, 202, 202) solid;
+}
+
+
+.topic-selector, .spec-topic-selector, .nvlo-topic-selector, .sflo-topic-selector, .ri-topic-selector, .ee-topic-selector, .ubr-topic-selector {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.05px rgb(206, 202, 202) solid;
+    height: 9%;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+.topic-selector:hover, .spec-topic-selector:hover, .nvlo-topic-selector:hover, .sflo-topic-selector:hover, .ri-topic-selector:hover, .ee-topic-selector:hover, .ubr-topic-selector:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+#activecontent {
+    display: block;
+}
+
+#inactivecontent {
+    display: none;
+}
+
+.nvlo-content {
+    padding-top: 1%;
+}
+.nvlo-content button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: blue;
+    font-size: 100%;
+    transition: color 0.3s ease;
+}
+
+.nvlo-content button:hover {
+    color: rgb(163, 163, 235);
+}
+
+#inactivepopup {
+    display: none;
+}
+
+#activepopup {
+    position: fixed;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(177, 174, 174, 50%);
+    padding: 0;
+}
+
+#activepopup p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    padding: 5%;
+    width: 50%;
+    background-color: white;
+}
+
+.nvlo-content h5,h6 {
+    text-align: left;
+    margin-left: 3%;
+}
+
+
+.nvlo-content a {
+    color: rgb(53, 53, 228);
+    transition: color 0.5s ease;
+    text-decoration: none;
+}
+
+.nvlo-content a:hover {
+    color: rgb(144, 144, 219);
+}
