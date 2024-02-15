@@ -4,7 +4,6 @@
     font-family: Rubik;
     padding: 0;
     margin: 0;
-    overflow: none;
 }
 
 body {
@@ -17,8 +16,8 @@ body {
     text-align: center;
     background-color: rgb(241, 241, 239);
     border-right: 0.25px rgb(168, 164, 164) solid;
-    z-index: 3; /* Increase the z-index to be above the sidebar */
-    position: relative; /* Added position relative */
+    z-index: 3;
+    position: relative;
     opacity: 1;
     font-size: 100%;  
 }
@@ -31,8 +30,8 @@ body {
     border-bottom: 0.5px rgb(204, 201, 201) solid;
     font-size: 150%;
     vertical-align: auto;
-    position: relative; /* Added position relative */
-    z-index: 3; /* Ensure button is above sidebar during transition */
+    position: relative;
+    z-index: 3;
     opacity: 1;
     cursor: pointer;
 }
@@ -47,14 +46,14 @@ body {
     position: fixed;
     left: -12.5%;
     transition: left 0.5s ease;
-    z-index: 1; /* Decrease the z-index to be behind the button */
+    z-index: 1;
 }
 
 .sidebar#active {
     transition: left 0.5s ease;
     position: fixed;
     left: 4%;
-    z-index: 1; /* Set a lower z-index to be behind the button */
+    z-index: 1;
 }
 
 .sidebarbutton button:hover {
@@ -79,11 +78,28 @@ body {
     cursor: pointer;
     background-color: white;
     transition: background-color 0.5s ease; 
+    font-size: 50%;
+    
 }
-.sidebar .dropdownbuttons #test {
+.sidebar .dropdownbuttons #subject {
     width: 100%;
-    height: 1000%;
+    height: 50px;
     position: sticky;
+    background-color:rgb(250, 250, 250);
+    border: none;
+    border-bottom: 0.05px rgb(206, 202, 202) solid;
+    cursor: pointer;
+}
+
+.sidebar .dropdownbuttons #subject:hover {
+    background-color: rgb(228, 228, 228);
+}
+.sidebar .dropdownbuttons#inactive {
+    display: none;
+}
+
+.sidebar .dropdownbuttons#active {
+    display: block;
 }
 
 .sidebar .dropdownbuttons {
