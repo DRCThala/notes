@@ -14,14 +14,17 @@
     </div>
 
     <div class="sidebar" id="inactive">
-        <button class="subject-selector" id="inactive">Select Subject..</button>
-        <div class="dropdownbuttons">
-            <button id="test">.</button>
+        <button class="subject-selector" id="inactive">Select Subject</button>
+        <div id="inactive" class="dropdownbuttons">
+            <button onclick="window.location.href='./index.html'" id="subject">Return Home</button>
+            <button onclick="window.location.href='./Subjects/Biology/index.html'" id="subject">Biology</button>
+            <button onclick="window.location.href='./Subjects/Chemistry/index.html'" id="subject">Chemistry</button>
         </div>
     </div>
 
     <div class="maincontent">
-        <p>test</p>
+        <h1>Instructions</h1>
+        <p>Click the book, click select subject and choose the subject.</p>
     </div>
 
 
@@ -42,14 +45,14 @@ sidebarButtonOpener.addEventListener('click', () => {
 });
 
 const subjectSelector = document.querySelector('.subject-selector')
+const dropdowndiv = document.querySelector('.dropdownbuttons')
 subjectSelector.addEventListener('click', () => {
-    if(subjectSelector.getAttribute('id') === 'inactive') {
-        subjectSelector.setAttribute('id', 'active')
+    if(dropdowndiv.getAttribute('id') === 'inactive') {
+        dropdowndiv.setAttribute('id', 'active')
     } else {
-        subjectSelector.setAttribute('id', 'inactive')
+        dropdowndiv.setAttribute('id', 'inactive')
     }
 })
-
 </script>
 
 
